@@ -13,7 +13,7 @@ axiosInstance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     const token = localStorage.getItem('auth-token');
     if (token && config.headers) {
-      debugger
+      
       config.headers.set('Authorization', `Bearer ${token}`);
     }
     return config;

@@ -146,7 +146,7 @@ const Overview = () => {
   };
 
   const onSuccessfulUserCreation = () => {
-    debugger
+    
     setIsDrawerOpen(false);
     getUserDetails();
   };
@@ -227,7 +227,7 @@ const Overview = () => {
           </TableBody>
         </Table>
       </TableContainer>
-
+     
       <SidePanelBar show={isDrawerOpen} onClose={handleDrawerClose}>
         <UserDetails
           user={createUser ? undefined : selectedUser}

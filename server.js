@@ -8,7 +8,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 const LOGIN_JSON_FILE_PATH = path.join(__dirname, 'api/login.json');
 function getFilePath(urlParts, queryParams) {
-  console.log('Request body:', urlParts, queryParams);
   let filePath = path.join(...urlParts) + '.json';
   return filePath;
 }
@@ -111,7 +110,6 @@ app.delete('/*', (req, res) => {
   }
 
   const url = `/api/${req.params['0']}`;
-  console.info('delete', url);
   const filePath = getFilePath(url.split('/'), req.query);
 
   fs.readFile(filePath, 'utf8', (err, data) => {

@@ -5,10 +5,8 @@ import i18n from "../i18n";
 
 const LanguageSelector = () => {
   const [language, setLanguage] = useState("en");
-
-
   const handleLanguageChange = (event: any, language: string) => {
-    debugger
+    
     if (language !== null) {
         i18n.changeLanguage(language); 
         setLanguage(language);

@@ -43,21 +43,24 @@ const App: React.FC = () => {
       <Router>
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
-          <AppBar
-            position="fixed"
+          <AppBar position="fixed"
             sx={{
               zIndex: (theme) => theme.zIndex.drawer + 1,
               backgroundColor: '#CE0043',
             }}
           >
             <Box sx={{ height: '10px' }}>
-              <Box
-                display="flex"
-                gap={2}
-                justifyContent="right"
-                alignItems="center"
-                sx={{ textAlign: 'right', p: 4 }}
-              >
+            <Box
+                sx={{
+                  position: 'absolute',
+                  top: 0,
+                  right: 0,
+                  display: 'flex',
+                  gap: 2,
+                  alignItems: 'center',
+                  p: 2,
+                }}
+>
                 <LanguageSelector />
 
                 <FormControlLabel
@@ -67,7 +70,7 @@ const App: React.FC = () => {
               </Box>
             </Box>
           </AppBar>
-          <LeftNavigationBar />
+          <LeftNavigationBar  />
           <Box component="main" sx={{ flexGrow: 1, p: 3, mt: 8 }}>
             <Routes>
               <Route
