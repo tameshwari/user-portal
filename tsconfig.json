@@ -6,8 +6,13 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["react-router-dom"],
     "allowJs": true,
     "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "react-router-dom": ["node_modules/react-router-dom"]
+    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -22,5 +27,5 @@
   },
   "include": [
     "src"
-  ]
+, "jest.config.ts"  ]
 }

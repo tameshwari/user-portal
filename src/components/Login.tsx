@@ -1,27 +1,37 @@
-import React, { useState } from 'react';
-import { TextField, Button, Container, Typography, Box, Alert } from '@mui/material';
-import axiosInstance from '../service/axiosInstance';
-import DOMPurify from 'dompurify';
+import React, { useState } from "react";
+import {
+  TextField,
+  Button,
+  Container,
+  Typography,
+  Box,
+  Alert,
+} from "@mui/material";
+import axiosInstance from "../service/axiosInstance";
+import DOMPurify from "dompurify";
 import { useNavigate } from "react-router-dom";
 
-const Login: React.FC = () => {
-  const [username, setUsername] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [error, setError] = useState<string>('');
+export const Login = () => {
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string>("");
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
-      const response = await axiosInstance.post("/login", { username, password });
+      const response = await axiosInstance.post("/login", {
+        username,
+        password,
+      });
       if (response.status === 200) {
         navigate("/");
       } else {
-        setError('Invalid username or password');
+        setError("Invalid username or password");
       }
     } catch (err) {
-      setError('Error occurred while logging in');
+      setError("Error occurred while logging in");
     }
   };
 
@@ -29,9 +39,9 @@ const Login: React.FC = () => {
     <Container component="main" maxWidth="xs">
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           padding: 2,
         }}
       >
@@ -57,7 +67,13 @@ const Login: React.FC = () => {
             required
           />
           {error && <Alert severity="error">{error}</Alert>}
-          <Button type="submit" fullWidth variant="contained" color="primary" sx={{ mt: 2 }}>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            sx={{ mt: 2 }}
+          >
             Login
           </Button>
         </form>
@@ -65,5 +81,3 @@ const Login: React.FC = () => {
     </Container>
   );
 };
-
-export default Login;

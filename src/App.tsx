@@ -13,7 +13,7 @@ import UserOverview from './pages/UserOverview';
 import KeyTemplates from './pages/KeyTemplates';
 import { lightTheme, darkTheme } from './utils/theme';
 import Departments from './pages/Departments';
-import Login from './components/Login';
+import {Login} from './components/Login';
 import { ThemeMode } from './utils/constant';
 import LanguageSelector from './utils/common/LanguageSelector';
 import { useTranslation } from 'react-i18next';
