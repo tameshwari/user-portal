@@ -1,5 +1,11 @@
 {
     "posts": "Welcome to our app!",
-    "description": "This is a multi-language React app."
+    "description": "This is a multi-language React app.",
+    "myCompanyLabel": "My Company Ltd",
+    "lightMode": "Light Mode",
+    "userOverView": "User Overview",
+    "departments": "Departments",
+    "keyTemplates" : "Key Templates",
+    "users": "Users"
  }
   

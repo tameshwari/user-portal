@@ -1,5 +1,11 @@
 {
     "posts": "Welcome to our Da!",
-    "description": "da is a multi-language React app."
+    "description": "da is a multi-language React app.",
+    "myCompanyLabel": "Mit firma Ltd",
+    "lightMode": "Lys tilstand",
+    "userOverView": "Brugeroversigt",
+    "departments": "Afdelinger",
+    "keyTemplates" : "Nøgle skabeloner",
+    "users": "brugere"
  }
   

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2",
+    "name": "user245",
+    "email": "user2@gmail.com",
+    "department": "Test",
+    "position": "position1",
+    "note": "note test",
+    "address": "test address",
+    "language": "english"
+  },
+  {
+    "id": "1742766321662",
+    "name": "Employee 1234",
+    "department": "Test",
+    "email": "test@gmil.com",
+    "position": "Test",
+    "note": "Noted",
+    "address": "Test",
+    "language": "danish"
+  }
+]
